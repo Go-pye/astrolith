@@ -1,3 +1,14 @@
+PATH
+  remote: .
+  specs:
+    astrolith (0.1.0)
+      apexcharts (~> 0.1)
+      daru (~> 0.3)
+      ephemeris (~> 0.1)
+      prawn (~> 2.4)
+      swe4r (~> 0.0.2)
+      tzinfo (~> 2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -46,6 +57,7 @@ PLATFORMS
 
 DEPENDENCIES
   apexcharts
+  astrolith!
   daru
   ephemeris
   prawn

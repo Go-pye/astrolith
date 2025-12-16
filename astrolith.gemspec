@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # Core dependencies
-  spec.add_dependency "swe4r", "~> 0.1"
+  spec.add_dependency "swe4r", "~> 0.0.2"
   spec.add_dependency "ephemeris", "~> 0.1"
   spec.add_dependency "daru", "~> 0.3"
   spec.add_dependency "tzinfo", "~> 2.0"
