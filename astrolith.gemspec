@@ -1,19 +1,19 @@
 Gem::Specification.new do |spec|
   spec.name          = "astrolith"
   spec.version       = "0.1.0"
-  spec.authors       = ["Your Name"]
-  spec.email         = ["your.email@example.com"]
+  spec.authors       = ["Go-pye"]
+  spec.email         = ["Go-pye@users.noreply.github.com"]
 
   spec.summary       = "A Ruby port of immanuel-python astrology library"
   spec.description   = "Astrolith is a decoupled astrological data calculation engine that generates structured JSON output. It supports multiple chart types including Natal, Solar Return, Progressed, Composite, and Transit charts."
-  spec.homepage      = "https://github.com/yourusername/astrolith"
+  spec.homepage      = "https://github.com/Go-pye/astrolith"
   spec.license       = "MIT"
 
   spec.required_ruby_version = ">= 2.7.0"
 
-  spec.files = Dir.glob("{lib,spec,examples}/**/*") + %w[
+  spec.files = Dir.glob("{lib,examples}/**/*") + %w[
     README.md
-    Gemfile
+    LICENSE
     astrolith.gemspec
   ]
 
