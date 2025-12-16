@@ -1,4 +1,4 @@
-# Ruby Chart Engine - Project Overview
+# Astrolith - Project Overview
 
 ## 🎯 Project Status: ✅ COMPLETE
 

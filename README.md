@@ -1,4 +1,4 @@
-# Ruby Chart Engine
+# Astrolith
 
 A Ruby port of the [immanuel-python](https://github.com/theriftlab/immanuel-python) astrology library, functioning as a decoupled data calculation engine with structured JSON output.
 
@@ -20,7 +20,7 @@ A Ruby port of the [immanuel-python](https://github.com/theriftlab/immanuel-pyth
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'ruby_chart_engine'
+gem 'astrolith'
 ```
 
 And then execute:
@@ -32,7 +32,7 @@ bundle install
 Or install it yourself as:
 
 ```bash
-gem install ruby_chart_engine
+gem install astrolith
 ```
 
 ## Quick Start
@@ -86,7 +86,7 @@ sun = chart.planets[:sun]
 
 # Check aspects
 chart.aspects.each do |aspect|
-  puts "#{aspect[:planet1]} #{aspect[:type]} #{aspect[:planet2]} (orb: #{aspect[:orb]}°)"
+  puts "#{aspect[:planet1]} #{aspect[:type]} #{aspect[:planet2]} (orb: #{aspect[:orb]}ï¿½)"
 end
 ```
 
@@ -237,15 +237,15 @@ house_system: :campanus
 ## Aspects
 
 Supported aspects with configurable orbs:
-- Conjunction (0°)
-- Opposition (180°)
-- Trine (120°)
-- Square (90°)
-- Sextile (60°)
-- Quincunx (150°)
-- Semi-Sextile (30°)
-- Semi-Square (45°)
-- Sesquiquadrate (135°)
+- Conjunction (0ï¿½)
+- Opposition (180ï¿½)
+- Trine (120ï¿½)
+- Square (90ï¿½)
+- Sextile (60ï¿½)
+- Quincunx (150ï¿½)
+- Semi-Sextile (30ï¿½)
+- Semi-Square (45ï¿½)
+- Sesquiquadrate (135ï¿½)
 
 ## Testing
 

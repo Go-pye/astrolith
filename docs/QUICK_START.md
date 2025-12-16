@@ -1,4 +1,4 @@
-# Ruby Chart Engine - Quick Start Guide
+# Astrolith - Quick Start Guide
 
 ## Installation
 
