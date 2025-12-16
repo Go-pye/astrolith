@@ -53,6 +53,7 @@ module RubyChartEngine
         house_data = @house_calc.calculate
         @house_cusps = house_data[:cusps]
         @angles = house_data[:angles]
+        @houses = house_data  # Store full house data including cusps and angles
 
         # Calculate planetary positions
         @planets = calculate_planets

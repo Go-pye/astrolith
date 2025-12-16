@@ -25,12 +25,12 @@ module RubyChartEngine
         adjusted_time = @datetime - (timezone_offset * 3600)
 
         # Use Swiss Ephemeris to calculate Julian Day
+        # swe_julday takes 4 arguments: year, month, day, hour (as decimal)
         Swe4r.swe_julday(
           adjusted_time.year,
           adjusted_time.month,
           adjusted_time.day,
-          adjusted_time.hour + (adjusted_time.min / 60.0) + (adjusted_time.sec / 3600.0),
-          Swe4r::SE_GREG_CAL
+          adjusted_time.hour + (adjusted_time.min / 60.0) + (adjusted_time.sec / 3600.0)
         )
       end
 

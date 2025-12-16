@@ -25,24 +25,25 @@ require_relative 'ruby_chart_engine/charts/transit'
 module RubyChartEngine
   class Error < StandardError; end
 
-  # Celestial object constants
+  # Swiss Ephemeris object ID constants
+  # These are standard SE values used across all implementations
   PLANETS = {
-    sun: Swe4r::SE_SUN,
-    moon: Swe4r::SE_MOON,
-    mercury: Swe4r::SE_MERCURY,
-    venus: Swe4r::SE_VENUS,
-    mars: Swe4r::SE_MARS,
-    jupiter: Swe4r::SE_JUPITER,
-    saturn: Swe4r::SE_SATURN,
-    uranus: Swe4r::SE_URANUS,
-    neptune: Swe4r::SE_NEPTUNE,
-    pluto: Swe4r::SE_PLUTO
+    sun: 0,       # SE_SUN
+    moon: 1,      # SE_MOON
+    mercury: 2,   # SE_MERCURY
+    venus: 3,     # SE_VENUS
+    mars: 4,      # SE_MARS
+    jupiter: 5,   # SE_JUPITER
+    saturn: 6,    # SE_SATURN
+    uranus: 7,    # SE_URANUS
+    neptune: 8,   # SE_NEPTUNE
+    pluto: 9      # SE_PLUTO
   }.freeze
 
   POINTS = {
-    north_node: Swe4r::SE_TRUE_NODE,
-    south_node: Swe4r::SE_TRUE_NODE, # Will be calculated as opposite
-    chiron: Swe4r::SE_CHIRON
+    north_node: 10,  # SE_TRUE_NODE (or use 11 for mean node)
+    south_node: 10,  # Will be calculated as opposite of north node
+    chiron: 15       # SE_CHIRON
   }.freeze
 
   ANGLES = {

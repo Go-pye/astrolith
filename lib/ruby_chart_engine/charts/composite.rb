@@ -43,7 +43,8 @@ module RubyChartEngine
         midpoint_jd = (jd1 + jd2) / 2.0
 
         # Convert back to datetime
-        result = Swe4r.swe_revjul(midpoint_jd, Swe4r::SE_GREG_CAL)
+        # swe_revjul takes 1 argument: julian day number
+        result = Swe4r.swe_revjul(midpoint_jd)
 
         ::DateTime.new(
           result[:year],
