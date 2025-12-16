@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'swe4r'
 gem 'ephemeris'
 gem 'daru'
+gem 'tzinfo'
 
 group :visualization do
   gem 'apexcharts'
