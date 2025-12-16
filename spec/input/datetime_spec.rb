@@ -65,8 +65,9 @@ RSpec.describe RubyChartEngine::Input::DateTime do
       input_dt = described_class.new('2024-03-15T12:00:00')
       jd = input_dt.to_julian_day
 
-      # JD for 2024-03-15 12:00:00 UTC should be around 2460387.0
-      expect(jd).to be_within(1).of(2460387.0)
+      # JD for 2024-03-15 12:00:00 UTC is 2460385.0
+      # (Verified with both swe_julday and Ruby's DateTime.jd)
+      expect(jd).to be_within(0.1).of(2460385.0)
     end
   end
 end
