@@ -86,7 +86,7 @@ sun = chart.planets[:sun]
 
 # Check aspects
 chart.aspects.each do |aspect|
-  puts "#{aspect[:planet1]} #{aspect[:type]} #{aspect[:planet2]} (orb: #{aspect[:orb]}�)"
+  puts "#{aspect[:planet1]} #{aspect[:type]} #{aspect[:planet2]} (orb: #{aspect[:orb]}°)"
 end
 ```
 
@@ -237,15 +237,15 @@ house_system: :campanus
 ## Aspects
 
 Supported aspects with configurable orbs:
-- Conjunction (0�)
-- Opposition (180�)
-- Trine (120�)
-- Square (90�)
-- Sextile (60�)
-- Quincunx (150�)
-- Semi-Sextile (30�)
-- Semi-Square (45�)
-- Sesquiquadrate (135�)
+- Conjunction (0°)
+- Opposition (180°)
+- Trine (120°)
+- Square (90°)
+- Sextile (60°)
+- Quincunx (150°)
+- Semi-Sextile (30°)
+- Semi-Square (45°)
+- Sesquiquadrate (135°)
 
 ## Testing
 
