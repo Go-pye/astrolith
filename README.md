@@ -230,13 +230,14 @@ house_system: :campanus
 
 **Planets**: Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn, Uranus, Neptune, Pluto
 
-**Points**: North Node, South Node *(Note: Chiron is not available when using the built-in Moshier ephemeris)*
+**Points**: North Node, South Node _(Note: Chiron is not available when using the built-in Moshier ephemeris)_
 
 **Angles**: Ascendant, Midheaven, Descendant, Imum Coeli
 
 ## Aspects
 
 Supported aspects with configurable orbs:
+
 - Conjunction (0°)
 - Opposition (180°)
 - Trine (120°)
@@ -293,14 +294,6 @@ bundle exec rspec
 # Run console for experimentation
 bundle console
 ```
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
 
 ## License
 
