@@ -290,9 +290,6 @@ bundle install
 
 # Run tests
 bundle exec rspec
-
-# Run console for experimentation
-bundle console
 ```
 
 ## License
