@@ -1,6 +1,8 @@
+require_relative "lib/astrolith/version"
+
 Gem::Specification.new do |spec|
   spec.name          = "astrolith"
-  spec.version       = "0.1.0"
+  spec.version       = Astrolith::VERSION
   spec.authors       = ["Go-pye"]
   spec.email         = ["Go-pye@users.noreply.github.com"]
 
