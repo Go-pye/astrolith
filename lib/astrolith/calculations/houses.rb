@@ -1,4 +1,4 @@
-module RubyChartEngine
+module Astrolith
   module Calculations
     class Houses
       attr_reader :julian_day, :latitude, :longitude, :house_system

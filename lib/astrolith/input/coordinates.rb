@@ -1,4 +1,4 @@
-module RubyChartEngine
+module Astrolith
   module Input
     class Coordinates
       attr_reader :latitude, :longitude

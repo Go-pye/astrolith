@@ -1,3 +1,3 @@
-module RubyChartEngine
+module Astrolith
   VERSION = "0.1.0"
 end

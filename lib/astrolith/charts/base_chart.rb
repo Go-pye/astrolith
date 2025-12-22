@@ -1,4 +1,4 @@
-module RubyChartEngine
+module Astrolith
   module Charts
     class BaseChart
       attr_reader :datetime, :coordinates, :timezone, :house_system,

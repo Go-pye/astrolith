@@ -49,9 +49,9 @@ A fully functional Ruby port of the immanuel-python astrology library, serving a
 ### Core Library (16 files)
 
 ```
-lib/ruby_chart_engine/
+lib/astrolith/
 │
-├── 📄 ruby_chart_engine.rb      # Main module
+├── 📄 astrolith.rb      # Main module
 ├── 📄 version.rb                 # Version info
 │
 ├── 📂 input/                     # Input parsing layer
@@ -129,7 +129,7 @@ Each celestial object includes:
 | Document | Purpose |
 |----------|---------|
 | [QUICK_START.md](QUICK_START.md) | Get started in 5 minutes |
-| [ruby_chart_engine_README.md](ruby_chart_engine_README.md) | Complete usage guide |
+| [astrolith_README.md](astrolith_README.md) | Complete usage guide |
 | [IMPLEMENTATION_SUMMARY.md](IMPLEMENTATION_SUMMARY.md) | Implementation details |
 | [examples/example_usage.rb](examples/example_usage.rb) | Working code examples |
 | Original [README.md](README.md) | Implementation plan |
@@ -141,9 +141,9 @@ Each celestial object includes:
 bundle install
 
 # 2. Create a chart
-require 'ruby_chart_engine'
+require 'astrolith'
 
-chart = RubyChartEngine::Charts::Natal.new(
+chart = Astrolith::Charts::Natal.new(
   datetime: '1990-05-15T14:30:00',
   latitude: 40.7128,
   longitude: -74.0060,
@@ -237,7 +237,7 @@ bundle exec rspec spec/charts/natal_spec.rb
 
 ### Basic Natal Chart
 ```ruby
-chart = RubyChartEngine::Charts::Natal.new(
+chart = Astrolith::Charts::Natal.new(
   datetime: '1990-05-15T14:30:00',
   latitude: '40n43',
   longitude: '74w00',
@@ -247,7 +247,7 @@ chart = RubyChartEngine::Charts::Natal.new(
 
 ### Solar Return for 2024
 ```ruby
-solar = RubyChartEngine::Charts::SolarReturn.new(
+solar = Astrolith::Charts::SolarReturn.new(
   natal_datetime: '1990-05-15T14:30:00',
   return_year: 2024,
   latitude: 40.7128,
@@ -258,7 +258,7 @@ solar = RubyChartEngine::Charts::SolarReturn.new(
 
 ### Current Transits
 ```ruby
-transit = RubyChartEngine::Charts::Transit.new(
+transit = Astrolith::Charts::Transit.new(
   natal_chart_params: natal_chart,
   transit_datetime: Time.now.iso8601
 )

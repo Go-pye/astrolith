@@ -1,4 +1,4 @@
-module RubyChartEngine
+module Astrolith
   module Serializers
     class JsonSerializer
       def self.serialize(chart)

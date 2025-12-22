@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe RubyChartEngine::Charts::Natal do
+RSpec.describe Astrolith::Charts::Natal do
   let(:chart_params) do
     {
       datetime: '1990-05-15T14:30:00',

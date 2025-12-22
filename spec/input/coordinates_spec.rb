@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe RubyChartEngine::Input::Coordinates do
+RSpec.describe Astrolith::Input::Coordinates do
   describe '#initialize' do
     context 'with decimal degrees' do
       it 'parses numeric coordinates' do
@@ -42,7 +42,7 @@ RSpec.describe RubyChartEngine::Input::Coordinates do
       it 'raises an error' do
         expect {
           described_class.new(lat: 'invalid', lon: '117w10')
-        }.to raise_error(RubyChartEngine::Error)
+        }.to raise_error(Astrolith::Error)
       end
     end
   end

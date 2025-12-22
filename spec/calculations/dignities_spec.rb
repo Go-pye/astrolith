@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe RubyChartEngine::Calculations::Dignities do
+RSpec.describe Astrolith::Calculations::Dignities do
   describe '.calculate' do
     context 'with planet in domicile' do
       it 'returns domicile true for Sun in Leo' do

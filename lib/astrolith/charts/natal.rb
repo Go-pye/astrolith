@@ -1,6 +1,6 @@
 require_relative 'base_chart'
 
-module RubyChartEngine
+module Astrolith
   module Charts
     class Natal < BaseChart
       # Natal chart is the base chart type

@@ -1,5 +1,5 @@
 require 'bundler/setup'
-require 'ruby_chart_engine'
+require 'astrolith'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-RSpec.describe RubyChartEngine::Serializers::JsonSerializer do
+RSpec.describe Astrolith::Serializers::JsonSerializer do
   let(:chart) do
-    RubyChartEngine::Charts::Natal.new(
+    Astrolith::Charts::Natal.new(
       datetime: '1990-05-15T14:30:00',
       latitude: 40.7128,
       longitude: -74.0060,
@@ -31,7 +31,7 @@ RSpec.describe RubyChartEngine::Serializers::JsonSerializer do
 
   describe '.serialize_collection' do
     it 'serializes multiple charts' do
-      chart2 = RubyChartEngine::Charts::Natal.new(
+      chart2 = Astrolith::Charts::Natal.new(
         datetime: '1995-08-20T10:00:00',
         latitude: 34.0522,
         longitude: -118.2437,

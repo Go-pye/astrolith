@@ -1,6 +1,6 @@
 require_relative 'base_chart'
 
-module RubyChartEngine
+module Astrolith
   module Charts
     class Composite < BaseChart
       attr_reader :chart1, :chart2

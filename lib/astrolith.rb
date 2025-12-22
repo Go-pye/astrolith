@@ -3,26 +3,26 @@ require 'ephemeris'
 require 'daru'
 require 'json'
 
-require_relative 'ruby_chart_engine/version'
-require_relative 'ruby_chart_engine/input/coordinates'
-require_relative 'ruby_chart_engine/input/datetime'
-require_relative 'ruby_chart_engine/input/timezone'
+require_relative 'astrolith/version'
+require_relative 'astrolith/input/coordinates'
+require_relative 'astrolith/input/datetime'
+require_relative 'astrolith/input/timezone'
 
-require_relative 'ruby_chart_engine/calculations/positions'
-require_relative 'ruby_chart_engine/calculations/houses'
-require_relative 'ruby_chart_engine/calculations/aspects'
-require_relative 'ruby_chart_engine/calculations/dignities'
+require_relative 'astrolith/calculations/positions'
+require_relative 'astrolith/calculations/houses'
+require_relative 'astrolith/calculations/aspects'
+require_relative 'astrolith/calculations/dignities'
 
-require_relative 'ruby_chart_engine/serializers/json_serializer'
+require_relative 'astrolith/serializers/json_serializer'
 
-require_relative 'ruby_chart_engine/charts/base_chart'
-require_relative 'ruby_chart_engine/charts/natal'
-require_relative 'ruby_chart_engine/charts/solar_return'
-require_relative 'ruby_chart_engine/charts/progressed'
-require_relative 'ruby_chart_engine/charts/composite'
-require_relative 'ruby_chart_engine/charts/transit'
+require_relative 'astrolith/charts/base_chart'
+require_relative 'astrolith/charts/natal'
+require_relative 'astrolith/charts/solar_return'
+require_relative 'astrolith/charts/progressed'
+require_relative 'astrolith/charts/composite'
+require_relative 'astrolith/charts/transit'
 
-module RubyChartEngine
+module Astrolith
   class Error < StandardError; end
 
   # Swiss Ephemeris object ID constants

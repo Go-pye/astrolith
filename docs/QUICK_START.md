@@ -12,9 +12,9 @@ bundle install
 ### 1. Create Your First Natal Chart
 
 ```ruby
-require 'ruby_chart_engine'
+require 'astrolith'
 
-chart = RubyChartEngine::Charts::Natal.new(
+chart = Astrolith::Charts::Natal.new(
   datetime: '1990-05-15T14:30:00',
   latitude: 40.7128,
   longitude: -74.0060,
@@ -33,15 +33,15 @@ puts chart.planets[:sun][:house]        # => 10
 json = chart.to_json
 
 # Pretty JSON
-require 'ruby_chart_engine'
-pretty_json = RubyChartEngine::Serializers::JsonSerializer.serialize_pretty(chart)
+require 'astrolith'
+pretty_json = Astrolith::Serializers::JsonSerializer.serialize_pretty(chart)
 puts pretty_json
 ```
 
 ### 3. Calculate Solar Return
 
 ```ruby
-solar_return = RubyChartEngine::Charts::SolarReturn.new(
+solar_return = Astrolith::Charts::SolarReturn.new(
   natal_datetime: '1990-05-15T14:30:00',
   return_year: 2024,
   latitude: 40.7128,
@@ -56,7 +56,7 @@ puts "Solar Return: #{solar_return.datetime.datetime}"
 
 ```ruby
 # First, create natal chart
-natal = RubyChartEngine::Charts::Natal.new(
+natal = Astrolith::Charts::Natal.new(
   datetime: '1990-05-15T14:30:00',
   latitude: 40.7128,
   longitude: -74.0060,
@@ -64,7 +64,7 @@ natal = RubyChartEngine::Charts::Natal.new(
 )
 
 # Then calculate transits
-transit = RubyChartEngine::Charts::Transit.new(
+transit = Astrolith::Charts::Transit.new(
   natal_chart_params: natal,
   transit_datetime: Time.now.iso8601
 )
@@ -101,7 +101,7 @@ bundle exec rspec --format documentation
 
 ```ruby
 # Decimal degrees
-chart = RubyChartEngine::Charts::Natal.new(
+chart = Astrolith::Charts::Natal.new(
   datetime: '1990-05-15T14:30:00',
   latitude: 40.7128,
   longitude: -74.0060,
@@ -109,7 +109,7 @@ chart = RubyChartEngine::Charts::Natal.new(
 )
 
 # Text format (degrees and minutes)
-chart = RubyChartEngine::Charts::Natal.new(
+chart = Astrolith::Charts::Natal.new(
   datetime: '1990-05-15T14:30:00',
   latitude: '40n43',
   longitude: '74w00',
@@ -121,7 +121,7 @@ chart = RubyChartEngine::Charts::Natal.new(
 
 ```ruby
 # Placidus (default)
-chart = RubyChartEngine::Charts::Natal.new(
+chart = Astrolith::Charts::Natal.new(
   datetime: '1990-05-15T14:30:00',
   latitude: 40.7128,
   longitude: -74.0060,
@@ -130,7 +130,7 @@ chart = RubyChartEngine::Charts::Natal.new(
 )
 
 # Whole Sign
-chart = RubyChartEngine::Charts::Natal.new(
+chart = Astrolith::Charts::Natal.new(
   datetime: '1990-05-15T14:30:00',
   latitude: 40.7128,
   longitude: -74.0060,
@@ -144,7 +144,7 @@ chart = RubyChartEngine::Charts::Natal.new(
 ### Accessing Chart Data
 
 ```ruby
-chart = RubyChartEngine::Charts::Natal.new(...)
+chart = Astrolith::Charts::Natal.new(...)
 
 # Planets
 chart.planets[:sun][:longitude]      # Raw longitude (0-360)
@@ -204,7 +204,7 @@ timezone: '+05:30'
 
 ## Next Steps
 
-1. Read the full documentation in [ruby_chart_engine_README.md](ruby_chart_engine_README.md)
+1. Read the full documentation in [astrolith_README.md](astrolith_README.md)
 2. Explore examples in [examples/example_usage.rb](examples/example_usage.rb)
 3. Check the implementation details in [IMPLEMENTATION_SUMMARY.md](IMPLEMENTATION_SUMMARY.md)
 4. Review the original plan in [README.md](README.md)
@@ -213,11 +213,11 @@ timezone: '+05:30'
 
 ### Chart Types
 ```ruby
-RubyChartEngine::Charts::Natal.new(datetime:, latitude:, longitude:, timezone:)
-RubyChartEngine::Charts::SolarReturn.new(natal_datetime:, return_year:, latitude:, longitude:, timezone:)
-RubyChartEngine::Charts::Progressed.new(natal_datetime:, progression_date:, latitude:, longitude:, timezone:)
-RubyChartEngine::Charts::Composite.new(chart1_params:, chart2_params:)
-RubyChartEngine::Charts::Transit.new(natal_chart_params:, transit_datetime:)
+Astrolith::Charts::Natal.new(datetime:, latitude:, longitude:, timezone:)
+Astrolith::Charts::SolarReturn.new(natal_datetime:, return_year:, latitude:, longitude:, timezone:)
+Astrolith::Charts::Progressed.new(natal_datetime:, progression_date:, latitude:, longitude:, timezone:)
+Astrolith::Charts::Composite.new(chart1_params:, chart2_params:)
+Astrolith::Charts::Transit.new(natal_chart_params:, transit_datetime:)
 ```
 
 ### Available Planets & Points

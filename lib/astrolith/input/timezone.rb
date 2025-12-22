@@ -1,6 +1,6 @@
 require 'tzinfo'
 
-module RubyChartEngine
+module Astrolith
   module Input
     class Timezone
       attr_reader :timezone, :offset

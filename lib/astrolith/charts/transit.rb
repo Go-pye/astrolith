@@ -1,6 +1,6 @@
 require_relative 'base_chart'
 
-module RubyChartEngine
+module Astrolith
   module Charts
     class Transit < BaseChart
       attr_reader :natal_chart, :transit_aspects

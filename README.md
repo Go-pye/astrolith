@@ -38,10 +38,10 @@ gem install astrolith
 ## Quick Start
 
 ```ruby
-require 'ruby_chart_engine'
+require 'astrolith'
 
 # Create a natal chart
-chart = RubyChartEngine::Charts::Natal.new(
+chart = Astrolith::Charts::Natal.new(
   datetime: '1990-05-15T14:30:00',
   latitude: 40.7128,
   longitude: -74.0060,
@@ -65,7 +65,7 @@ puts json
 ### Natal Chart
 
 ```ruby
-chart = RubyChartEngine::Charts::Natal.new(
+chart = Astrolith::Charts::Natal.new(
   datetime: '1990-05-15T14:30:00',
   latitude: 40.7128,
   longitude: -74.0060,
@@ -93,7 +93,7 @@ end
 ### Solar Return
 
 ```ruby
-solar_return = RubyChartEngine::Charts::SolarReturn.new(
+solar_return = Astrolith::Charts::SolarReturn.new(
   natal_datetime: '1990-05-15T14:30:00',
   return_year: 2024,
   latitude: 40.7128,
@@ -105,7 +105,7 @@ solar_return = RubyChartEngine::Charts::SolarReturn.new(
 ### Progressed Chart
 
 ```ruby
-progressed = RubyChartEngine::Charts::Progressed.new(
+progressed = Astrolith::Charts::Progressed.new(
   natal_datetime: '1990-05-15T14:30:00',
   progression_date: '2024-03-15',
   latitude: 40.7128,
@@ -117,7 +117,7 @@ progressed = RubyChartEngine::Charts::Progressed.new(
 ### Composite Chart
 
 ```ruby
-composite = RubyChartEngine::Charts::Composite.new(
+composite = Astrolith::Charts::Composite.new(
   chart1_params: {
     datetime: '1990-05-15T14:30:00',
     latitude: 40.7128,
@@ -136,14 +136,14 @@ composite = RubyChartEngine::Charts::Composite.new(
 ### Transit Chart
 
 ```ruby
-natal = RubyChartEngine::Charts::Natal.new(
+natal = Astrolith::Charts::Natal.new(
   datetime: '1990-05-15T14:30:00',
   latitude: 40.7128,
   longitude: -74.0060,
   timezone: 'America/New_York'
 )
 
-transit = RubyChartEngine::Charts::Transit.new(
+transit = Astrolith::Charts::Transit.new(
   natal_chart_params: natal,
   transit_datetime: Time.now.iso8601
 )

@@ -1,6 +1,6 @@
 require_relative 'base_chart'
 
-module RubyChartEngine
+module Astrolith
   module Charts
     class SolarReturn < BaseChart
       attr_reader :natal_sun_longitude

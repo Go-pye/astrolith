@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe RubyChartEngine::Input::DateTime do
+RSpec.describe Astrolith::Input::DateTime do
   describe '#initialize' do
     context 'with DateTime object' do
       it 'parses DateTime object' do
@@ -55,7 +55,7 @@ RSpec.describe RubyChartEngine::Input::DateTime do
       it 'raises error if required fields are missing' do
         expect {
           described_class.new(year: 2024, month: 3)
-        }.to raise_error(RubyChartEngine::Error)
+        }.to raise_error(Astrolith::Error)
       end
     end
   end

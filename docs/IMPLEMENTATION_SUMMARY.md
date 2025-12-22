@@ -8,29 +8,29 @@ Successfully implemented a complete Ruby port of the immanuel-python astrology l
 
 ### ✅ Phase 1: Calculation Core Integration
 
-**Input Parsing Module** (`lib/ruby_chart_engine/input/`)
-- [coordinates.rb](lib/ruby_chart_engine/input/coordinates.rb) - Parses decimal degrees and standard text formats (e.g., '32n43')
-- [datetime.rb](lib/ruby_chart_engine/input/datetime.rb) - Handles multiple datetime formats (ISO 8601, Hash, DateTime objects)
-- [timezone.rb](lib/ruby_chart_engine/input/timezone.rb) - TZInfo integration for accurate timezone handling
+**Input Parsing Module** (`lib/astrolith/input/`)
+- [coordinates.rb](lib/astrolith/input/coordinates.rb) - Parses decimal degrees and standard text formats (e.g., '32n43')
+- [datetime.rb](lib/astrolith/input/datetime.rb) - Handles multiple datetime formats (ISO 8601, Hash, DateTime objects)
+- [timezone.rb](lib/astrolith/input/timezone.rb) - TZInfo integration for accurate timezone handling
 
 ### ✅ Phase 2: Data Model Translation
 
-**Calculation Utilities** (`lib/ruby_chart_engine/calculations/`)
-- [positions.rb](lib/ruby_chart_engine/calculations/positions.rb) - Swiss Ephemeris integration for planetary positions
-- [houses.rb](lib/ruby_chart_engine/calculations/houses.rb) - House system calculations (supports 7 systems)
-- [aspects.rb](lib/ruby_chart_engine/calculations/aspects.rb) - Aspect detection between celestial objects
-- [dignities.rb](lib/ruby_chart_engine/calculations/dignities.rb) - Essential dignity calculations
+**Calculation Utilities** (`lib/astrolith/calculations/`)
+- [positions.rb](lib/astrolith/calculations/positions.rb) - Swiss Ephemeris integration for planetary positions
+- [houses.rb](lib/astrolith/calculations/houses.rb) - House system calculations (supports 7 systems)
+- [aspects.rb](lib/astrolith/calculations/aspects.rb) - Aspect detection between celestial objects
+- [dignities.rb](lib/astrolith/calculations/dignities.rb) - Essential dignity calculations
 
-**Chart Classes** (`lib/ruby_chart_engine/charts/`)
-- [base_chart.rb](lib/ruby_chart_engine/charts/base_chart.rb) - Base class with core calculation logic
-- [natal.rb](lib/ruby_chart_engine/charts/natal.rb) - Natal charts with moon phase and chart shape analysis
-- [solar_return.rb](lib/ruby_chart_engine/charts/solar_return.rb) - Solar return calculations for specific years
-- [progressed.rb](lib/ruby_chart_engine/charts/progressed.rb) - Secondary progressions ("a day for a year")
-- [composite.rb](lib/ruby_chart_engine/charts/composite.rb) - Midpoint charts between two natal charts
-- [transit.rb](lib/ruby_chart_engine/charts/transit.rb) - Current transits to natal positions
+**Chart Classes** (`lib/astrolith/charts/`)
+- [base_chart.rb](lib/astrolith/charts/base_chart.rb) - Base class with core calculation logic
+- [natal.rb](lib/astrolith/charts/natal.rb) - Natal charts with moon phase and chart shape analysis
+- [solar_return.rb](lib/astrolith/charts/solar_return.rb) - Solar return calculations for specific years
+- [progressed.rb](lib/astrolith/charts/progressed.rb) - Secondary progressions ("a day for a year")
+- [composite.rb](lib/astrolith/charts/composite.rb) - Midpoint charts between two natal charts
+- [transit.rb](lib/astrolith/charts/transit.rb) - Current transits to natal positions
 
-**Serialization** (`lib/ruby_chart_engine/serializers/`)
-- [json_serializer.rb](lib/ruby_chart_engine/serializers/json_serializer.rb) - JSON output with filtering options
+**Serialization** (`lib/astrolith/serializers/`)
+- [json_serializer.rb](lib/astrolith/serializers/json_serializer.rb) - JSON output with filtering options
 
 ### ✅ Phase 3: Testing & Documentation
 
@@ -50,7 +50,7 @@ Successfully implemented a complete Ruby port of the immanuel-python astrology l
 ```
 astrolith/
 ├── lib/
-│   └── ruby_chart_engine/
+│   └── astrolith/
 │       ├── calculations/
 │       │   ├── aspects.rb
 │       │   ├── dignities.rb
@@ -141,10 +141,10 @@ astrolith/
 ## Usage Example
 
 ```ruby
-require 'ruby_chart_engine'
+require 'astrolith'
 
 # Create natal chart
-chart = RubyChartEngine::Charts::Natal.new(
+chart = Astrolith::Charts::Natal.new(
   datetime: '1990-05-15T14:30:00',
   latitude: '40n43',
   longitude: '74w00',

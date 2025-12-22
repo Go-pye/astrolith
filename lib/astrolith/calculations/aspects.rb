@@ -1,4 +1,4 @@
-module RubyChartEngine
+module Astrolith
   module Calculations
     class Aspects
       # Standard aspect definitions with orbs

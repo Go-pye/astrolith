@@ -1,6 +1,6 @@
 require 'time'
 
-module RubyChartEngine
+module Astrolith
   module Input
     class DateTime
       attr_reader :year, :month, :day, :hour, :minute, :second, :datetime

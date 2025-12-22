@@ -1,6 +1,6 @@
 require_relative 'base_chart'
 
-module RubyChartEngine
+module Astrolith
   module Charts
     class Progressed < BaseChart
       attr_reader :natal_datetime, :progression_date

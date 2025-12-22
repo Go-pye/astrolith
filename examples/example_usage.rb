@@ -1,13 +1,13 @@
 #!/usr/bin/env ruby
 
-require_relative '../lib/ruby_chart_engine'
+require_relative '../lib/astrolith'
 
 # Example 1: Basic Natal Chart
 puts "=" * 80
 puts "Example 1: Basic Natal Chart"
 puts "=" * 80
 
-natal_chart = RubyChartEngine::Charts::Natal.new(
+natal_chart = Astrolith::Charts::Natal.new(
   datetime: '1990-05-15T14:30:00',
   latitude: 40.7128,
   longitude: -74.0060,
@@ -41,7 +41,7 @@ puts "\n" + "=" * 80
 puts "Example 2: Solar Return Chart for 2024"
 puts "=" * 80
 
-solar_return = RubyChartEngine::Charts::SolarReturn.new(
+solar_return = Astrolith::Charts::SolarReturn.new(
   natal_datetime: '1990-05-15T14:30:00',
   return_year: 2024,
   latitude: 40.7128,
@@ -58,7 +58,7 @@ puts "\n" + "=" * 80
 puts "Example 3: Composite Chart"
 puts "=" * 80
 
-composite = RubyChartEngine::Charts::Composite.new(
+composite = Astrolith::Charts::Composite.new(
   chart1_params: {
     datetime: '1990-05-15T14:30:00',
     latitude: 40.7128,
@@ -84,7 +84,7 @@ puts "\n" + "=" * 80
 puts "Example 4: Transit Chart"
 puts "=" * 80
 
-transit = RubyChartEngine::Charts::Transit.new(
+transit = Astrolith::Charts::Transit.new(
   natal_chart_params: natal_chart,
   transit_datetime: '2024-03-15T12:00:00'
 )
@@ -100,11 +100,11 @@ puts "Example 5: JSON Export"
 puts "=" * 80
 
 puts "\nNatal Chart as JSON (pretty):"
-json = RubyChartEngine::Serializers::JsonSerializer.serialize_pretty(natal_chart)
+json = Astrolith::Serializers::JsonSerializer.serialize_pretty(natal_chart)
 puts json[0..500] + "..."
 
 puts "\nChart with filtered output (metadata and planets only):"
-filtered_json = RubyChartEngine::Serializers::JsonSerializer.serialize_with_options(
+filtered_json = Astrolith::Serializers::JsonSerializer.serialize_with_options(
   natal_chart,
   include: [:metadata, :planets],
   pretty: true
@@ -117,7 +117,7 @@ puts "Example 6: Different Coordinate Formats"
 puts "=" * 80
 
 # Standard text format
-chart_text = RubyChartEngine::Charts::Natal.new(
+chart_text = Astrolith::Charts::Natal.new(
   datetime: '1990-05-15T14:30:00',
   latitude: '40n43',
   longitude: '74w00',
@@ -136,7 +136,7 @@ puts "=" * 80
 house_systems = [:placidus, :koch, :whole_sign, :equal]
 
 house_systems.each do |system|
-  chart = RubyChartEngine::Charts::Natal.new(
+  chart = Astrolith::Charts::Natal.new(
     datetime: '1990-05-15T14:30:00',
     latitude: 40.7128,
     longitude: -74.0060,

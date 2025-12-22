@@ -1,4 +1,4 @@
-module RubyChartEngine
+module Astrolith
   module Calculations
     class Positions
       attr_reader :julian_day, :latitude, :longitude
