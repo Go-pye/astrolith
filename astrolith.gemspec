@@ -27,10 +27,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency "daru", "~> 0.3"
   spec.add_dependency "tzinfo", "~> 2.0"
 
-  # Optional visualization dependencies
-  spec.add_dependency "apexcharts", "~> 0.1"
-  spec.add_dependency "prawn", "~> 2.4"
-
   # Development dependencies
   spec.add_development_dependency "rspec", "~> 3.12"
   spec.add_development_dependency "pry", "~> 0.14"

@@ -130,10 +130,6 @@ astrolith/
 - **daru** - Data structuring
 - **tzinfo** - Timezone handling
 
-### Optional (Visualization)
-- **apexcharts** - Analytical charts
-- **prawn** - PDF/geometric drawing for chart wheels
-
 ### Development
 - **rspec** - Testing framework
 - **pry** - Debugging console
@@ -173,10 +169,9 @@ json = chart.to_json
 2. **Additional Points** - Add asteroids (Juno, Pallas, Vesta, Ceres)
 3. **Part of Fortune** - Calculate Arabic Parts
 4. **Synastry** - Dedicated synastry chart class
-5. **Visualization** - Implement chart wheel drawing
-6. **Performance** - Add caching for repeated calculations
-7. **Validation** - Add input validation and error handling
-8. **Documentation** - Add YARD documentation for API reference
+5. **Performance** - Add caching for repeated calculations
+6. **Validation** - Add input validation and error handling
+7. **Documentation** - Add YARD documentation for API reference
 
 ### Testing Improvements
 1. Add integration tests for all chart types

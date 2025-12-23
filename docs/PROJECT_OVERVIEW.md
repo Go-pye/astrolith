@@ -179,10 +179,6 @@ bundle exec rspec spec/charts/natal_spec.rb
 - **daru** - Data structuring
 - **tzinfo** - Timezone handling
 
-### Optional
-- **apexcharts** - Data visualization
-- **prawn** - Chart wheel rendering
-
 ### Development
 - **rspec** - Testing
 - **pry** - Debugging
@@ -223,15 +219,9 @@ bundle exec rspec spec/charts/natal_spec.rb
 2. **Arabic Parts**: Part of Fortune, etc.
 3. **Synastry Class**: Dedicated relationship charts
 4. **Aspect Refinement**: Apply/separate detection
-5. **Visualization**: SVG/PDF chart wheels
-6. **Performance**: Caching layer for repeated calculations
-7. **Validation**: Enhanced input validation
-8. **API Documentation**: YARD docs
-
-### Visualization Phase (Not Yet Implemented)
-- Chart wheel rendering (Prawn/SVG)
-- Element/modality distribution charts (Apexcharts)
-- Aspect grid visualization
+5. **Performance**: Caching layer for repeated calculations
+6. **Validation**: Enhanced input validation
+7. **API Documentation**: YARD docs
 
 ## 💡 Usage Patterns
 

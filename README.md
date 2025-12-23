@@ -269,11 +269,6 @@ bundle exec rspec spec/charts/natal_spec.rb
 - **daru**: Data Analysis in Ruby for data structuring
 - **tzinfo**: Timezone handling
 
-### Optional Visualization
-
-- **apexcharts**: For analytical charts
-- **prawn**: For PDF and geometric drawing (chart wheels)
-
 ## Documentation
 
 - [Quick Start Guide](docs/QUICK_START.md) - Get started quickly with common use cases
