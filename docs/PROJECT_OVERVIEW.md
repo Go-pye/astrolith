@@ -96,6 +96,7 @@ spec/
 ## 🎨 Key Features
 
 ### ✅ Chart Types Supported
+
 1. **Natal Chart** - Birth chart with moon phase & chart shape analysis
 2. **Solar Return** - Annual return charts for any year
 3. **Progressed Chart** - Secondary progressions (day-for-year)
@@ -103,7 +104,9 @@ spec/
 5. **Transit Chart** - Current planetary positions vs natal
 
 ### ✅ Rich Data Output
+
 Each celestial object includes:
+
 - Longitude (absolute & sign-relative)
 - Sign placement (name, element, modality)
 - House placement
@@ -113,11 +116,13 @@ Each celestial object includes:
 - Speed vectors
 
 ### ✅ Flexible Input
+
 - **Coordinates**: Decimal degrees or text format ('40n43')
 - **DateTime**: ISO 8601, Hash, or Ruby DateTime objects
 - **Timezone**: TZInfo identifiers or UTC offsets
 
 ### ✅ Advanced Calculations
+
 - 9 aspect types with customizable orbs
 - 7 house systems
 - Essential dignity scoring
@@ -126,13 +131,13 @@ Each celestial object includes:
 
 ## 📚 Documentation
 
-| Document | Purpose |
-|----------|---------|
-| [QUICK_START.md](QUICK_START.md) | Get started in 5 minutes |
-| [astrolith_README.md](astrolith_README.md) | Complete usage guide |
-| [IMPLEMENTATION_SUMMARY.md](IMPLEMENTATION_SUMMARY.md) | Implementation details |
-| [examples/example_usage.rb](examples/example_usage.rb) | Working code examples |
-| Original [README.md](README.md) | Implementation plan |
+| Document                                               | Purpose                  |
+| ------------------------------------------------------ | ------------------------ |
+| [QUICK_START.md](QUICK_START.md)                       | Get started in 5 minutes |
+| [astrolith_README.md](astrolith_README.md)             | Complete usage guide     |
+| [IMPLEMENTATION_SUMMARY.md](IMPLEMENTATION_SUMMARY.md) | Implementation details   |
+| [examples/example_usage.rb](examples/example_usage.rb) | Working code examples    |
+| Original [README.md](README.md)                        | Implementation plan      |
 
 ## 🚀 Quick Start
 
@@ -174,39 +179,44 @@ bundle exec rspec spec/charts/natal_spec.rb
 ## 📦 Dependencies
 
 ### Core
+
 - **swe4r** - Swiss Ephemeris calculations
 - **ephemeris** - Astrological logic helpers
 - **daru** - Data structuring
 - **tzinfo** - Timezone handling
 
 ### Development
+
 - **rspec** - Testing
 - **pry** - Debugging
 
 ## 🎯 Implementation Compliance
 
-| Phase | Status | Components |
-|-------|--------|------------|
+| Phase                     | Status      | Components                           |
+| ------------------------- | ----------- | ------------------------------------ |
 | Phase 1: Core Integration | ✅ Complete | Input parsing, Swiss Ephemeris setup |
-| Phase 2: Data Translation | ✅ Complete | All chart classes, calculations |
-| Phase 3: Testing & Docs | ✅ Complete | RSpec suite, comprehensive docs |
+| Phase 2: Data Translation | ✅ Complete | All chart classes, calculations      |
+| Phase 3: Testing & Docs   | ✅ Complete | RSpec suite, comprehensive docs      |
 
 **All features from the original plan have been implemented.**
 
 ## 🌟 Highlights
 
 ### Clean Architecture
+
 - Separation of concerns across layers
 - Extensible design for new chart types
 - DRY principles with BaseChart inheritance
 
 ### Production Ready
+
 - Comprehensive error handling
 - Flexible input validation
 - Structured JSON output
 - Test coverage for critical paths
 
 ### Developer Friendly
+
 - Clear, idiomatic Ruby code
 - Extensive documentation
 - Working examples
@@ -215,6 +225,7 @@ bundle exec rspec spec/charts/natal_spec.rb
 ## 🔮 Future Enhancements
 
 ### Potential Additions
+
 1. **More Points**: Asteroids (Juno, Pallas, Vesta, Ceres)
 2. **Arabic Parts**: Part of Fortune, etc.
 3. **Synastry Class**: Dedicated relationship charts
@@ -226,6 +237,7 @@ bundle exec rspec spec/charts/natal_spec.rb
 ## 💡 Usage Patterns
 
 ### Basic Natal Chart
+
 ```ruby
 chart = Astrolith::Charts::Natal.new(
   datetime: '1990-05-15T14:30:00',
@@ -236,6 +248,7 @@ chart = Astrolith::Charts::Natal.new(
 ```
 
 ### Solar Return for 2024
+
 ```ruby
 solar = Astrolith::Charts::SolarReturn.new(
   natal_datetime: '1990-05-15T14:30:00',
@@ -247,6 +260,7 @@ solar = Astrolith::Charts::SolarReturn.new(
 ```
 
 ### Current Transits
+
 ```ruby
 transit = Astrolith::Charts::Transit.new(
   natal_chart_params: natal_chart,
