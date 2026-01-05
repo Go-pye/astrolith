@@ -26,6 +26,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "ephemeris", "~> 0.1"
   spec.add_dependency "daru", "~> 0.3"
   spec.add_dependency "tzinfo", "~> 2.0"
+  spec.add_dependency "matrix", "~> 0.4"  # Required for Ruby 3.1+
 
   # Development dependencies
   spec.add_development_dependency "rspec", "~> 3.12"
